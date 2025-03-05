@@ -12,6 +12,8 @@
   --purple: #6915ff;
 }
 
+/* ----------------------- OVERALL STYLES ------------------------------ */
+
 * {
   margin: 0;
   padding: 0;
@@ -38,19 +40,83 @@ body {
   font-size: 1.1rem;
 
   /* set background */
-  /* background: linear-gradient(to bottom, var(--off-black), var(--off-gray)); */
   background-color: var(--off-white);
 
   /* set layout */
   display: grid;
-  grid-template-rows: auto 1fr auto;
+
+  /* push footer to bottom */
+  grid-template-rows: auto 1fr auto; 
   min-height: 100vh;
 }
 
-@media (max-width: 520px) {
+main a {
+  margin: 40px;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+}
+
+main button {
+  font-size: 1.2rem;
+
+  padding: 20px;
+
+  border: 2px solid var(--off-black);
+  border-radius: 5px;
+}
+
+/* idk what the below media query does */
+
+/* @media (max-width: 520px) {
   body {
     grid-template-rows: autofit, minmax(100px, 1fr);
   }
+} */
+
+/* -------------------- HOME PAGE -------------------------*/
+
+/* resize each logo */
+#sp-logo {
+  max-width: 100%;
+  /* width: 300px; */
+}
+#nus-comp-logo {
+  max-width: 100%;
+  /* width: 450px;
+  height: 90%; */
+}
+
+.logos-wrapper {
+  margin: 32px;
+  background-color: var(--off-white);
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .logos-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logos-wrapper img {
+    margin: 20px;
+  }
+}
+
+.introduction {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.introduction img {
+  width: 200px;
+  object-fit: cover;
 }
 
 /* ------------------- PROJECTS PAGE --------------------- */
@@ -163,63 +229,4 @@ body {
   /* background: linear-gradient(to bottom, rgb(28, 168, 255), rgb(108, 108, 255)); */
   background: url(../assets/cover-4.png);
   height: 100vh;
-}
-
-/* -------------------- HOME PAGE -------------------------*/
-
-/* resize each logo */
-#sp-logo {
-  width: 300px;
-}
-#nus-comp-logo {
-  width: 450px;
-  height: 90%;
-}
-
-.logos-wrapper {
-  padding: 30px 0px;
-  background-color: var(--off-white);
-
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-@media (max-width: 800px) {
-  .logos-wrapper {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .logos-wrapper img {
-    margin: 20px;
-  }
-}
-
-.introduction {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.introduction img {
-  width: 200px;
-  object-fit: cover;
-}
-
-main a {
-  /* margin: 40px; */
-  text-decoration: none;
-
-  display: flex;
-  justify-content: center;
-}
-
-main button {
-  font-size: 1.2rem;
-
-  padding: 20px;
-
-  border: 2px solid var(--off-black);
-  border-radius: 5px;
 }

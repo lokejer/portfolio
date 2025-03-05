@@ -1,5 +1,24 @@
-1. add flip animation on hover for the nav buttons
-2. prevent my face from being shrunk on hover
-3. make JEROME. title at topleft turn purple with gradient on hover
+/------- PRIORITY --------/
 4. add glow effect to button for Check Out My Work
+5. make footer responsive
+2. prevent my face from being shrunk on hover
+6. make projects page responsive
+
+/------- IDEAS --------/
+2. on hover, make JEROME. change to jero00o, lokejer, lokejer@gmail.com etc
+1. add flip animation on hover for the nav buttons
+3. make JEROME. title at topleft turn purple with gradient on hover
 5. fix the projects screen
+
+finished stuff:
+
+* 1. current GPA, cGPA
+* 2. cca contributions (?) 
+
+/------- COMPLETED --------/
+>> fixed SP and NUS logo width issue (no longer expands out of screen)
+-- used max-width instead of hard-coded width
+
+>> make navbar responsive (make 3 icons collapse into one home menu on mobile)
+
+>> email redirect issue

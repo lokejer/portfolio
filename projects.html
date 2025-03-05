@@ -8,6 +8,7 @@
   <title>My Work</title>
 </head>
 <body>
+
   <hr>
 
   <nav>
@@ -15,10 +16,35 @@
       <img src="icons/passport photo (removeBg).png" alt="JL logo">
       <span>JEROME.</span>
     </div>
+
+    <ul class="sidebar">
+      <li id="close-btn" onclick="hideSidebar()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+      </li>
+
+      <li><a target="_blank" href="https://github.com/lokejer?tab=repositories">
+        <img src="icons/github_icon.png" alt="github_icon icon"><span>GITHUB</span></a></li>
+        
+      <li><a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=lokejer@gmail.com">
+        <img src="icons/mail icon.png" alt="mail icon"><span>EMAIL</span></a></li>
+
+      <li><a target="_blank" href="https://t.me/jero00o">
+        <img src="icons/telegram_icon.png" alt="telegram icon"><span>TELEGRAM</span></a></li>
+    </ul>
+
     <ul>
-      <li><a target="_blank" href="https://github.com/lokejer?tab=repositories"><img src="icons/github_icon.png" alt="github_icon icon"></a></li>
-      <li><a target="_blank" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfttZhCkmrvzFxKmDmZWfRKCLLwqmctlgzWWqcSqjSmDDkwdfCjXqBLSdkGJTSmkCjHbmL"><img src="icons/mail icon.png" alt="mail icon"></a></li>
-      <li><a target="_blank" href="https://t.me/jero00o"><img src="icons/telegram_icon.png" alt="telegram icon"></a></li>
+      <li><a class="hideOnMobile" target="_blank" href="https://github.com/lokejer?tab=repositories">
+        <img src="icons/github_icon.png" alt="github_icon icon"></a></li>
+
+      <li><a class="hideOnMobile" target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=lokejer@gmail.com">
+        <img src="icons/mail icon.png" alt="mail icon"></a></li>
+
+      <li><a class="hideOnMobile" target="_blank" href="https://t.me/jero00o">
+        <img src="icons/telegram_icon.png" alt="telegram icon"></a></li>
+
+      <li id="menu-btn" onclick="showSidebar()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+        </svg></li>
     </ul>
   </nav>
 
