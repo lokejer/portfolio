@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Lato&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Forum&family=Lato&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --off-white: #fffbee;
+  --off-black: #1e232b;
+  --off-gray: #2e323c;
+  --vibrant-orange: #f97316;
+  --light-orange: #fb923c;
+  --golden-yellow: #facc15;
+  --light-purple: #8c93ff;
+  --purple: #6915ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+	/* hide scrollbar while still enabling scrolling */
+  overflow-x: hidden;
+	overflow-y: scroll;
+	scrollbar-width: none; /* hides scrollbar in Firefox */
+}
+
+html::-webkit-scrollbar body::-webkit-scrollbar {
+	display: none; /* hides scrollbar in Chrome, Edge, Safari */
+}
+
+body {
+  /* set font */
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.1rem;
+
+  /* set background */
+  /* background: linear-gradient(to bottom, var(--off-black), var(--off-gray)); */
+  background-color: var(--off-white);
+
+  /* set layout */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+@media (max-width: 520px) {
+  body {
+    grid-template-rows: autofit, minmax(100px, 1fr);
+  }
+}
+
+/* ------------------- PROJECTS PAGE --------------------- */
+
+/* BODY STYLES */
+.page-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title h1 {
+  margin: 20px;
+  text-align: center;
+
+  /* font-family: Poppins, Segoe UI, Tahoma, Geneva, Verdana, sans-serif; */
+  font-size: 2.5rem;
+  font-weight: bolder;
+
+  background: linear-gradient(to bottom right, #8c93ff, #6915ff);
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px hsla(250, 100%, 70%, 0.1);
+
+}
+
+.page-title .line {
+  flex-grow: 1;
+  height: 2px;
+  background: linear-gradient(to bottom right, #8c93ff, #6915ff);
+}
+
+
+/* PROJECT GRID */
+.project-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /* height: 100vh; this makes the body to footer transition weird */
+}
+
+.card {
+  border: 2px solid var(--off-gray);
+  border-top: 4px solid var(--off-gray);
+  width: 100%;
+}
+
+.card img {
+  /* padding-top: 16px; */
+
+  max-width: 85%;
+  height: 70vh;
+  object-fit: cover;
+
+  border-radius: 20px
+}
+
+.description-container {
+  display: grid;
+  place-items: center;
+}
+
+.description-container h1 {
+  padding: 12px;
+
+  background-color: rgba(0, 0, 0, 0.350);
+  /* border-radius: 24px; */
+  color: var(--light-orange);
+
+  display: flex;
+  justify-content: center;
+}
+
+.description-container a {
+  width: 120px;
+  margin: 8px;
+  padding: 12px;
+
+  text-decoration: none;
+  font-size: 1.2rem;
+
+  background: linear-gradient(to bottom right, var(--purple), var(--light-purple));
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  color: var(--off-white);
+  transition: transform 0.3s ease;
+}
+
+.description-container a:hover {
+  transform: scale(0.94);
+}
+
+/* banner layout & backgrounds */
+
+.banner-1, .banner-2, .banner-3 {
+  display: grid;
+  place-items: center;
+} /* center all items inside banner */
+
+.banner-1 {
+  /* background: linear-gradient(to bottom, rgb(255, 63, 63), rgb(255, 206, 206)); */
+  background: url(../assets/cover-4.png);
+  height: 100vh;
+}
+.banner-2 {
+  /* background: linear-gradient(to bottom, rgb(0, 84, 0), rgb(118, 158, 130)); */
+  background: url(../assets/cover-4.png);
+  height: 100vh;
+}
+.banner-3 {
+  /* background: linear-gradient(to bottom, rgb(28, 168, 255), rgb(108, 108, 255)); */
+  background: url(../assets/cover-4.png);
+  height: 100vh;
+}
+
+/* -------------------- HOME PAGE -------------------------*/
+
+/* resize each logo */
+#sp-logo {
+  width: 300px;
+}
+#nus-comp-logo {
+  width: 450px;
+  height: 90%;
+}
+
+.logos-wrapper {
+  padding: 30px 0px;
+  background-color: var(--off-white);
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .logos-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logos-wrapper img {
+    margin: 20px;
+  }
+}
+
+.introduction {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.introduction img {
+  width: 200px;
+  object-fit: cover;
+}
+
+main a {
+  /* margin: 40px; */
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+}
+
+main button {
+  font-size: 1.2rem;
+
+  padding: 20px;
+
+  border: 2px solid var(--off-black);
+  border-radius: 5px;
+}

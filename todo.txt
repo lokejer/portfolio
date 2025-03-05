@@ -1,0 +1,5 @@
+1. add flip animation on hover for the nav buttons
+2. prevent my face from being shrunk on hover
+3. make JEROME. title at topleft turn purple with gradient on hover
+4. add glow effect to button for Check Out My Work
+5. fix the projects screen
