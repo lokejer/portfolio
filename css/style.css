@@ -59,12 +59,38 @@ main a {
 }
 
 main button {
+  position: relative;
+
   font-size: 1.2rem;
 
-  padding: 20px;
+  padding: 1em 2em;
 
-  border: 2px solid var(--off-black);
-  border-radius: 5px;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--off-gray);
+  color: var(--light-orange);
+
+  /* position pseudoelement ontop of button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main button::after {
+  content: '';
+  position: absolute;
+  border-radius: 100px;
+
+  z-index: -1;
+
+  width: 102%;
+  height: 107%;
+  background: linear-gradient(to bottom right, #8c94ff, rgb(107, 21, 255))
+}
+
+main button:hover {
+  z-index: 0;
+  box-shadow: 40px 0 100px #8c94ff7a, -40px 0 50px rgba(107, 21, 255, 0.247);
 }
 
 /* idk what the below media query does */
@@ -76,6 +102,21 @@ main button {
 } */
 
 /* -------------------- HOME PAGE -------------------------*/
+
+.introduction {
+  width: 100vw;
+  height: 90vh;
+
+  border: 0.8px solid black;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.introduction .page-title h1 {
+  font-size: 5rem;
+}
 
 /* resize each logo */
 #sp-logo {
@@ -109,16 +150,6 @@ main button {
   }
 }
 
-.introduction {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.introduction img {
-  width: 200px;
-  object-fit: cover;
-}
-
 /* ------------------- PROJECTS PAGE --------------------- */
 
 /* BODY STYLES */
@@ -140,7 +171,6 @@ main button {
   background-clip: text;
   color: transparent;
   text-shadow: 0 0 20px hsla(250, 100%, 70%, 0.1);
-
 }
 
 .page-title .line {
@@ -176,6 +206,8 @@ main button {
 .description-container {
   display: grid;
   place-items: center;
+
+  z-index: 999;
 }
 
 .description-container h1 {
@@ -189,23 +221,15 @@ main button {
   justify-content: center;
 }
 
-.description-container a {
-  width: 120px;
-  margin: 8px;
-  padding: 12px;
+.description-container button {
+  margin: 12px;
+  padding: 0.8em 1.8em;
 
-  text-decoration: none;
-  font-size: 1.2rem;
-
-  background: linear-gradient(to bottom right, var(--purple), var(--light-purple));
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 50px;
-  color: var(--off-white);
-  transition: transform 0.3s ease;
+  color: #f0f0f0;
 }
 
-.description-container a:hover {
-  transform: scale(0.94);
+.description-container button:hover {
+  box-shadow: 40px 0 100px #8c94ff, -40px 0 50px rgba(107, 21, 255, 0.651);
 }
 
 /* banner layout & backgrounds */
