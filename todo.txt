@@ -1,29 +1,67 @@
 /------- PRIORITY --------/
-5. make footer responsive
-6. make projects page responsive
 
 /------- IDEAS --------/
 1. add flip animation on hover for the nav buttons
 3. make JEROME. title at topleft turn purple with gradient on hover
-5. fix the projects screen
 
 * 1. current GPA, cGPA
 * 2. cca contributions (?) 
 
 /------- COMPLETED --------/
+5. fix the projects screen (grid is responsive on mobile)
+5. make footer responsive [did so by decreasing padding n using em instead of px]
+1. typewriter effect for .introduction h1
+2. border animation for check out my work button
+
+committed
 >> on index.html intro rotates between Jerome jero00o lokejer@gmail.com etc
 
 >> added gradient border & glow effect to button for Check Out My Work and Details
 
 >> prevent my face from being shrunk on hover
 
-
-
-
-committed
 >> fixed SP and NUS logo width issue (no longer expands out of screen)
 -- used max-width instead of hard-coded width
 
 >> make navbar responsive (make 3 icons collapse into one home menu on mobile)
 
 >> email redirect issue
+
+
+
+
+OLD TYPEWRITER ANIMATION (includes character deletion after typing out)
+// function typewriterEffect() {
+// 	const currentText = titleVariations[index]
+
+// 	if (!isDeleting) {
+// 		// add one char a time
+// 		titleText.innerText = currentText.slice(0, char_index + 1)
+// 		char_index++
+
+// 		// if entire word typed out, pause before deleting
+// 		if (char_index === currentText.length) {
+// 			isDeleting = true
+// 			setTimeout(typewriterEffect, 1600)
+// 			return
+// 		}
+// 	} // else {
+// 	// 	// delete one char a time
+// 	// 	titleText.innerText = currentText.slice(0, char_index - 1)
+// 	// 	char_index--
+
+// 	// 	// if text fully deleted, move on to next variation
+// 	// 	if (char_index === 0) {
+// 	// 		isDeleting = false
+// 	// 		index = (index + 1) % titleVariations.length
+// 	// 	}
+// 	// }
+
+//   if (char_index === titleVariations[index].length) {
+//     index = (index + 1) % titleVariations.length
+//   }
+
+// 	// adjust typing speed (faster deleting, slower typing)
+// 	let speed = isDeleting ? 120 : 140
+// 	setTimeout(typewriterEffect, speed)
+// } 

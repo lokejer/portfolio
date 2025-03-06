@@ -62,6 +62,9 @@ nav img {
   height: 50px;
   object-fit: cover;
   transition: transform 0.3s ease;
+
+  /* background-color: var(--vibrant-orange);
+  background-clip: border-area; */
 }
 
 nav img:hover {
@@ -70,9 +73,7 @@ nav img:hover {
 
 /* FOOTER STYLES */
 footer {
-  /* background-color: var(--golden-yellow); */
-
-  padding: 24px 0;
+  padding: 1em;
 
   display: flex;
   justify-content: center;
@@ -80,9 +81,9 @@ footer {
 }
 
 footer a {
+  margin: 0 1em;
+  padding: 0.2em;
   position: relative;
-  margin: 0 24px;
-  padding: 12px;
   text-decoration: none;
   color: var(--off-black);
   font-weight: 500;
@@ -102,6 +103,14 @@ footer a::before {
 
 footer a:hover::before {
   transform: scaleX(1);
+}
+
+@media (max-width: 400px) {
+
+  /* decrease padding of footer elements */
+  .footer a {
+    margin: 0 0.5em;
+  }
 }
 
 /* MOBILE RESPONSIVENESS */
