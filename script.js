@@ -18,9 +18,9 @@ document.getElementById("separator-line").onclick = function() {
 
 const titleVariations = [
 	"hi! i'm Jerome...",
-  "i do machine learning...",
-  "and full-stack development!",
-	"email: lokejer@gmail.com;",
+  "i specialise in AI / MLOps,",
+  "& full-stack development.",
+	"> lokejer@gmail.com",
 ]
 
 // INTRO SECTION TYPEWRITER EFFECT 
@@ -41,7 +41,7 @@ function typewriterEffect() {
 		// If the entire word is typed, pause and start deleting
 		if (char_index === currentText.length) {
 			isDeleting = true
-			setTimeout(typewriterEffect, 1600) // Pause for a while before deleting
+			setTimeout(typewriterEffect, (index === 3 ? 5000 : 1400)) // pause before deleting
 			return
 		}
 	} else {
@@ -56,7 +56,7 @@ function typewriterEffect() {
 	}
 
 	// adjust typing speed
-	let speed = isDeleting ? 140 : 160
+	let speed = isDeleting ? 80 : 120
 	setTimeout(typewriterEffect, speed)
 }
 

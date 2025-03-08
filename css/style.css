@@ -88,7 +88,7 @@ main a {
   line-height: 1; /* ensure proper vertical alignment */
   color: var(--purple);
   opacity: 1;
-  animation: blink 0.8s infinite;
+  animation: blink 1.0s infinite;
 }
 
 @keyframes blink {
@@ -167,7 +167,7 @@ main a {
 
   /* background-color: var(--light-orange); */
   color: var(--off-black);
-  border-radius: 10px;
+  border-radius: 100px;
   border: none;
   /* border: 1px solid var(--off-black); */
 
@@ -193,7 +193,7 @@ main a {
 
   z-index: -1;
   padding: 3px;
-  border-radius: 10px;
+  border-radius: 100px;
 
   animation: 3.3s spin linear infinite;
 }
