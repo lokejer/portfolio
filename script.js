@@ -16,6 +16,18 @@ document.getElementById("separator-line").onclick = function() {
 		"https://sopossible.sp.edu.sg/courses/schools/soc/applied-ai-analytics"
 }
 
+window.addEventListener("scroll", () => {
+  let arrow = document.getElementById("scroll-indicator")
+  let target = document.getElementById("intro-btn").offsetTop
+  let scrollPosition = window.scrollY + window.innerHeight
+
+  if (scrollPosition >= target) {
+    arrow.classList.add("hidden")
+  } else {
+    arrow.classList.remove("hidden")
+  }
+})
+
 const titleVariations = [
 	"hi! i'm Jerome...",
   "i specialise in AI / MLOps,",
@@ -56,7 +68,7 @@ function typewriterEffect() {
 	}
 
 	// adjust typing speed
-	let speed = isDeleting ? 80 : 120
+	let speed = isDeleting ? 20 : 120
 	setTimeout(typewriterEffect, speed)
 }
 
