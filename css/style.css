@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Forum&family=Lato&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+  --black: #141414;
   --off-white: #fffbee;
   --off-black: #1e232b;
+  --gray: #1b1c22;
   --off-gray: #2e323c;
   --vibrant-orange: #f97316;
   --light-orange: #fb923c;
@@ -15,6 +17,8 @@
 /* ----------------------- OVERALL STYLES ------------------------------ */
 
 * {
+  cursor: none;
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -33,6 +37,7 @@ html::-webkit-scrollbar body::-webkit-scrollbar {
 }
 
 body {
+
   /* set font */
   font-family: "Forum", serif;
   font-weight: 400;
@@ -40,7 +45,7 @@ body {
   font-size: 1.1rem;
 
   /* set background */
-  background-color: var(--off-white);
+  background-color: var(--black);
 
   /* set layout */
   display: grid;
@@ -48,6 +53,12 @@ body {
   /* push footer to bottom */
   grid-template-rows: auto 1fr auto; 
   min-height: 100vh;
+}
+
+main {
+  background: 
+    radial-gradient(circle, var(--off-gray) 10%, transparent 11%);
+  background-size: 20px 20px;
 }
 
 main a {
@@ -58,12 +69,24 @@ main a {
   justify-content: center;
 }
 
+/* -------------------- CURSOR -------------------- */
+#cursor {
+  position: fixed;
+  z-index: 999;
+  width: 15px;
+  height: 15px;
+  background: #facc15ad;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 5px var(--golden-yellow);
+  pointer-events: none; /* Prevents interference with clicks */
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
+
 /* -------------------- HOME PAGE -------------------------*/
 .introduction {
   width: 100vw;
   height: 90vh;
-
-  border: 0.8px solid black;
 
   display: flex;
   justify-content: flex-start;
@@ -135,7 +158,7 @@ main a {
 
 .logos-wrapper {
   margin: 2em 0;
-  background-color: var(--off-white);
+  background-color: var(--off-gray);
 
   display: flex;
   justify-content: space-evenly;
