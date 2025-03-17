@@ -1,27 +1,3 @@
-const cursor = document.getElementById("cursor")
-
-document.addEventListener("mousemove", (e) => {
-	cursor.style.left = `${e.clientX}px`
-	cursor.style.top = `${e.clientY}px`
-})
-
-document.getElementById("separator-line").onclick = function () {
-	window.location.href =
-		"https://sopossible.sp.edu.sg/courses/schools/soc/applied-ai-analytics"
-}
-
-window.addEventListener("scroll", () => {
-	let arrow = document.getElementById("scroll-indicator")
-	let target = document.getElementById("sp-logo").offsetTop
-	let scrollPosition = window.scrollY + window.innerHeight
-
-	if (scrollPosition >= target) {
-		arrow.classList.add("hidden")
-	} else {
-		arrow.classList.remove("hidden")
-	}
-})
-
 const titleVariations = [
 	"> jerome loke",
 	"> MLOps",
