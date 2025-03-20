@@ -14,13 +14,13 @@ nav {
 nav::before {
   content: "";
   position: absolute;
-  left: 50%;
+  left: 49%;
   top: 40%;
   transform: translate(-50%, -50%);
-  width: 260px; /* Control glow width */
-  height: 60%;
-  background: linear-gradient(to right, rgba(138, 43, 226, 0.8), rgba(255, 165, 0, 0.6));
-  filter: blur(40px); /* Softens the glow */
+  width: 240px; /* Control glow width */
+  height: 26%;
+  background: linear-gradient(to right, rgba(138, 43, 226, 0.8), rgba(255, 166, 0, 0.799));
+  filter: blur(20px); /* Softens the glow */
   z-index: -1; /* Keeps it behind the navbar */
 }
 
@@ -41,10 +41,6 @@ nav a {
   text-decoration: none;
   transition: transform 0.2s ease;
   text-shadow: 0 0 20px hsla(250, 100%, 70%, 0.5);
-}
-
-nav a:hover {
-  transform: scale(1.1);
 }
 
 .logo {
@@ -91,7 +87,7 @@ footer a::before {
   translate: 50%; /* centralize */
   width: 50%;
   height: 1.6px;
-  background-color: var(--off-white);
+  background-color: var(--golden-yellow);
   transform: scaleX(0);
   transition: transform 0.26s ease-in-out;
 }
