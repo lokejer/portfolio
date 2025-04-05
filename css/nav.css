@@ -14,11 +14,11 @@ nav {
 nav::before {
   content: "";
   position: absolute;
-  left: 49%;
+  left: 50%;
   top: 40%;
   transform: translate(-50%, -50%);
-  width: 240px; /* Control glow width */
-  height: 26%;
+  width: 10%; /* Control glow width */
+  height: 30%;
   background: linear-gradient(to right, rgba(138, 43, 226, 0.8), rgba(255, 166, 0, 0.799));
   filter: blur(20px); /* Softens the glow */
   z-index: -1; /* Keeps it behind the navbar */
@@ -44,9 +44,8 @@ nav a {
 }
 
 .logo {
-  margin: 4px 12px;
-  padding: 0 16px;
   color: var(--vibrant-orange);
+  display: inline-block;
 }
 
 .logo h1 {
@@ -102,95 +101,4 @@ footer a:hover::before {
   .footer a {
     margin: 0 0.5em;
   }
-}
-
-/* MOBILE RESPONSIVENESS */
-.sidebar {
-
-  /* hide sidebar by default */
-  display: none;
-  /* display: fixed; THIS WAS UR MISTAKE BEFORE */
-
-  /* overlays sidebar */
-  position: fixed;
-  z-index: 999;
-
-  /* set params */
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 100%;
-
-  /* set layout */
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  /* background-color: var(--off-white); */
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar a {
-  padding: 4px;
-
-  /* set design layout */
-  background-color: #8c94ff29;
-  border-radius: 100px;
-  border-bottom: 2px solid var(--light-orange);
-
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-
-  display: flex;
-  align-items: center;
-
-  /* transition: transform 1s ease; */
-}
-
-/* sidebar links hover animation */
-.sidebar a:hover {
-  transform: scale(0.98);
-}
-
-.sidebar span {
-  color: var(--off-black);
-
-  margin-left: 8px;
-}
-
-#menu-btn {
-  display: none;
-}
-
-@media (max-width: 600px) {
-
-  /* hide 3 icon navbar */
-  .hideOnMobile {
-    display: none;
-  }
-
-  /* show burger icon */
-  #menu-btn {
-    display: inline;
-  }
-
-  /* prevent icon hover animation */
-  nav img:hover {
-    transform: scale(1);
-  }
-}
-
-@media (max-width: 450px) {
-
-  /* hide face pic to make space for burger icon */
-  nav .logo img {
-    display: none;
-  }
-
-  /* change SP and NUS logo to smaller versions (SP n NUS) */
-
-  /* edit footer paddings and margins *unless find a responsive way to hardcode */
 }

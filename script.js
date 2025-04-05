@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", function () {
+	const elements = document.querySelectorAll(".fade-in")
+
+	function checkScroll() {
+		const triggerBottom = window.innerHeight * 0.9 // 90% viewport height
+
+		elements.forEach((el, index) => {
+			const rect = el.getBoundingClientRect()
+			if (rect.top < triggerBottom) {
+				el.style.transitionDelay = `${index * 0.1}s` // Stagger effect
+				el.classList.add("show")
+			}
+		})
+	}
+
+	window.addEventListener("scroll", checkScroll)
+	checkScroll() // Run once on load
+})
+
+// INTRO SECTION TYPEWRITER EFFECT
 const titleVariations = [
 	"> jerome loke",
 	"> MLOps",
@@ -5,7 +25,6 @@ const titleVariations = [
 	"> lokejer@gmail.com",
 ]
 
-// INTRO SECTION TYPEWRITER EFFECT
 let index = 0
 let char_index = 0
 let isDeleting = false
@@ -42,47 +61,3 @@ function typewriterEffect() {
 }
 
 typewriterEffect()
-
-// IMAGE CAROUSEL PARALLAX EFFECT
-const track = document.getElementById("image-track")
-
-window.onmousedown = (e) => {
-	track.dataset.mouseDownAt = e.clientX
-}
-
-window.onmouseup = () => {
-	track.dataset.mouseDownAt = "0" // reset on mouse up
-	track.dataset.prevPercentage = nextPercentage
-}
-
-window.onmousemove = (e) => {
-	if (track.dataset.mouseDownAt === "0") return
-
-	const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-		maxDelta = window.innerWidth / 2
-
-	// track last mouse position
-	const percentage = (mouseDelta / maxDelta) * -100
-	nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage
-
-	// **clamp the value within -100 to 0**
-	nextPercentage = Math.max(Math.min(nextPercentage, 0), -100)
-
-	track.dataset.percentage = nextPercentage
-
-	track.animate(
-		{
-			transform: `translate(${nextPercentage}%, -50%)`,
-		},
-		{ duration: 10000, fill: "forwards" }
-	)
-
-	for (const image of track.getElementsByClassName("image")) {
-		image.animate(
-			{
-				objectPosition: `${nextPercentage + 100}% 50%`,
-			},
-			{ duration: 10000, fill: "forwards" }
-		)
-	}
-}

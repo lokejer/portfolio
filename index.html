@@ -11,12 +11,12 @@
 <body id="index-page">
   
   <nav>
-    <a href="#work"><span>Work</span></a>
+    <!-- <a href="#work"><span>Work</span></a> -->
     <div class="logo">
       <!-- <img src="icons/passport photo (removeBg).png" alt="JL logo"> -->
       <h1>JL</h1>
     </div>
-    <a href="contact.html"><span>Contact</span></a>
+    <!-- <a href="contact.html"><span>Contact</span></a> -->
   </nav>
 
   <hr>
@@ -29,9 +29,9 @@
     <div class="highlight-wrapper">
       <div class="highlight-title">
 
-        <h1>Featured Project</h1>
+        <h1 class="fade-in">Featured Project</h1>
 
-        <div class="icon-wrapper">
+        <div class="icon-wrapper fade-in">
           <img class="icon" src="icons/python.png" alt="Python_Lang Icon">
           <img class="icon" src="icons/ai.png" alt="AIML Icon">
           <img class="icon" id="githubIconExclusive" src="icons/github.png" alt="Github Icon">
@@ -39,40 +39,46 @@
 
       </div>
 
-      <div class="highlight-image-wrapper">
+      <div class="highlight-image-wrapper fade-in">
         <img src="assets/cover-4.png" alt="highlight project image">
       </div>
     </div>
 
-    <section id="work" class="image-track-wrapper">
-      <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-        <img class="image" draggable="false" src="assets/carousel-imgs/aaron gordon thumbnail.webp">
-        <img class="image" draggable="false" src="assets/carousel-imgs/booker thumbnail.jpeg">
-        <img class="image" draggable="false" src="assets/carousel-imgs/harden thumbnail.jpg">
-        <img class="image" draggable="false" src="assets/carousel-imgs/jarenjacksonjr thumbnail.jpg">
-        <img class="image" draggable="false" src="assets/carousel-imgs/jaylen wells thumbnail.webp">
-        <img class="image" draggable="false" src="assets/carousel-imgs/KD thumbnail.webp">
-        <img class="image" draggable="false" src="assets/carousel-imgs/kyrie irving thumbnail.webp">
-        <img class="image" draggable="false" src="assets/carousel-imgs/morant thumbnail.webp">
-        <img class="image" draggable="false" src="assets/carousel-imgs/stephcurry thumbnail.webp">
-        <img class="image" draggable="false" src="assets/carousel-imgs/yuki thumbnail.jpg">
+    <section class="projects-wrapper" id="work">
+
+      <div class="page-title"><h1>My Work</h1></div>
+
+      <div class="project fade-in">        
+        <div class="image-wrapper">
+          <img src="assets/carousel-imgs/morant thumbnail.webp" alt="project cover">
+        </div>
+        <div class="title">
+          <h1>Project 1</h1>
+          <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas blanditiis nihil magni commodi aspernatur vitae?</h3>
+        </div>
       </div>
-    </section>
+      <div class="project fade-in">        
+        <div class="image-wrapper">
+          <img src="assets/carousel-imgs/KD thumbnail.webp" alt="project cover">
+        </div>
+        <div class="title">
+          <h1>Project 2</h1>
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quibusdam iure, architecto assumenda perferendis maxime officiis reprehenderit explicabo accusantium neque!</h3>
+        </div>
+      </div>
+      <div class="project fade-in">        
+        <div class="image-wrapper">
+          <img src="assets/carousel-imgs/aaron gordon thumbnail.webp" alt="project cover">
+        </div>
+        <div class="title">
+          <h1>Project 3</h1>
+          <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, cupiditate?</h3>
+        </div>
+      </div>
+
+      <button id="contact-me-btn">CONTACT ME</button>      
       
-
-    <button id="projects-btn"></button>
-
-    <!-- <div id="separator-line">
-      <h2>i'm currently taking <span title="Diploma in Applied AI and Analytics">SP DAAA*</span> and aiming to enter NUS!</h2>
-    </div>
-
-    <div class="logos-wrapper">
-      <img id="sp-logo" src="assets/SP_logo.png" alt="SP logo">
-      <img id="nus-comp-logo" src="assets/nus_computing_logo-removebg-preview.png" alt="NUS Computing logo">
-    </div>
-
-    <a id="intro-btn" href="projects.html"><button>Projects</button></a> -->
-
+    </section>
   </main>
 
   <hr>
